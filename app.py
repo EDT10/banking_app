@@ -18,8 +18,6 @@ pin = int(input("Enter PIN: "))
 balance = float(0)
 
 print(f"{name} has been registered with starting balance of ${balance}")
-#print(name, "has been registered with starting balance of" + str(balance) )
-
 
 while True:
     print("LOGIN")
@@ -27,9 +25,11 @@ while True:
     pin_to_validate = int(input("Enter PIN:"))
 
     if name == name_to_validate and pin == pin_to_validate:
+        print("---")
         print("Login successful!")
         break
     else:
+        print("---")
         print("Invalid credential")
         continue
 
@@ -43,11 +43,9 @@ while True:
         balance = account.deposit(balance)
         account.show_balance(balance)
         continue
-        #print(current_bal)
     elif option == 3:
         balance = account.withdraw(balance)
-        current_bal = account.withdraw(balance)
-        print("")
+        account.show_balance(balance)
         continue
     elif option == 4:
         account.logout(name)
@@ -56,10 +54,6 @@ while True:
         print("Invalid opion")
         continue
     
-
-
-
-#Task 3: Log in and prompt for menu option
 
 
 

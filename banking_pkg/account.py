@@ -1,17 +1,23 @@
 def show_balance(balance):
-    print("Your balance is:$", float(balance))
+    print("---")
+    print(f"Your balance is: ${balance}")
 
 
 def deposit(balance):
+    print("---")
     amount = float(input("Enter amount to deposit: "))
     return float(balance) + float(amount)
 
+
+
 def withdraw(balance):
-    amount = float(input("Emnter amount to withdraw"))
-    return float(amount) - float(balance)
+    print("---")
+    amount = float(input("Enter amount to withdraw: "))
+    return float(balance) - float(amount)
 
 
 def logout(name):
+    print("---")
     print(f"Goodbye {name}")
 
 
